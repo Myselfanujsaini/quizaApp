@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <title> Quiz App</title>
+  </head>
+  <body>
+    <header>
+    <nav>
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger icon (three dashes) -->
+        <ul id="dropdown-menu" class="menu hidden">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="user-pic">
+        <img src="user.jpg" class="display-pic" alt="Your Profile Picture" />
+      </div>
+    </nav>
+</header>
+    <div class="header">
+      <h1>Challenge Your Knowledge with Our Quizzes</h1>
+      <p>Challenge your brain with quizzes from various subjects. Select a course to begin.</p>
+    </div>
+    <hr />
+    <div class="text-conatiner">
+      <div class="total-questions-number">
+        <p>Questions <span id="current-text">0</span> Of <span id="total-text">100</span></p>
+        <p id="timer">00:00</p>
+        </div>
+        <div class="course-selection">
+        <label for="course">Select a course:</label>
+        <select id="course">
+            <option value="">--Select a Course--</option>
+            <option value="math">Mathematics</option>
+            <option value="science">Science</option>
+            <option value="history">History</option>
+            <option value="reasoning">Reasoning</option>
+        </select>
+    </div>
+        <input type="button" name="Start-quize" id="start-quiz" value="Start Quiz" onclick="startTest()" />
+        <input type="button" name="result" id="result" value="Result" onclick="showResult()" />
+        </div><hr />
+        <div class="question-container">
+          <form id="quiz-form">
+          <p id="question-text"><span id="question-number">1.</span></p>
+<input type="radio" class="input-answer" id="option1" name="answer" value="Option 1">
+<label for="option1"><span class="input-answer" id="option1-label"></span></label><br>
+
+<input type="radio" class="input-answer" id="option2" name="answer" value="Option 2">
+<label for="option2"><span class="input-answer" id="option2-label"></span></label><br>
+
+<input type="radio" class="input-answer" id="option3" name="answer" value="Option 3">
+<label for="option3"><span class="input-answer" id="option3-label"></span></label><br>
+
+<input type="radio" class="input-answer" id="option4" name="answer" value="Option 4">
+<label for="option4"><span class="input-answer" id="option4-label"></span></label><br>
+
+    <button type="button" onclick="submitAnswer()" id="submit-answerBtn">Submit Answer</button>
+    <button type="button" onclick="nextBtn()" id="next-question">Next</button>
+    <button type="button" onclick="backBtn()" id="back-question">Back</button><br />
+    <br />
+    <button type="button" onclick="submitTest()" id="submitTest-btn">Submit Test</button>
+</form>
+ </div>
+        
+    <hr />
+    <script src="script.js"></script>
+  </body>
+              </html>
